@@ -1,0 +1,352 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f9fafb;
+    color: #333;
+}
+
+/* =========================
+   GLOBAL UTIL
+========================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px clamp(20px, 5vw, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 12px;
+}
+
+/* LOGO */
+.logo {
+    font-size: 20px;
+    letter-spacing: 0.3px;
+}
+
+.logo-cook {
+    color: #ef7722;
+    font-weight: 700;
+}
+
+.logo-ora {
+    color: #666666;
+    font-weight: 600;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #666;
+}
+
+.nav a.active {
+    color: #ef7722;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    background: #ffffff;
+    padding: 72px 0;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.hero-text h1 {
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.hero-text h1 span {
+    color: #ef7722;
+}
+
+.hero-text p {
+    max-width: 420px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #ef7722;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.hero-illustration {
+    width: clamp(220px, 30vw, 320px);
+    height: auto;
+}
+
+/* =========================
+   WHY
+========================= */
+.why {
+    background: #fff1e6;
+    padding: 64px clamp(20px, 5vw, 40px);
+    text-align: center;
+}
+
+.why h2 {
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.why h2 span {
+    color: #ef7722;
+}
+
+.why-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.why-card {
+    padding: 28px 24px;
+    border-radius: 20px;
+    text-align: left;
+    background: #fff;
+}
+
+.why-icon-wrap {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.why-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.why-card p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* =========================
+   RECIPE
+========================= */
+.featured,
+.more {
+    padding: 48px clamp(20px, 5vw, 40px);
+}
+
+.featured h2,
+.more h2 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.featured h2 span,
+.more h2 span {
+    color: #ef7722;
+}
+
+.recipe-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.recipe-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.recipe-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.recipe-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #777;
+}
+
+/* =========================
+   CTA
+========================= */
+.cta {
+    background: #fff1e6;
+    padding: 64px clamp(20px, 5vw, 40px);
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 8px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* =========================
+   MORE HEADER
+========================= */
+.more-header {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
+}
+
+.more-link {
+    font-size: 14px;
+    color: #ef7722;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+    background: #fff1e6;
+    padding: 72px 0 32px;
+    margin-top: 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 40px);
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo-cook {
+    color: #ef7722;
+}
+
+.footer-logo .logo-ora {
+    color: #666666;
+    font-weight: 600;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: #444;
+    max-width: 560px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ef7722;
+}
+
+.footer-divider {
+    height: 1px;
+    background: #ef7722;
+    margin-bottom: 24px;
+}
+
+.footer-copy {
+    font-size: 12px;
+    color: #ef7722;
+    text-align: center;
+}

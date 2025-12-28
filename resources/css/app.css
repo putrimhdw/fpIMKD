@@ -241,6 +241,95 @@ body {
     color: #777;
 }
 
+/* Reset link style pada recipe card */
+.recipe-card {
+    text-decoration: none;
+    color: #111; /* hitam */
+}
+
+/* Pastikan semua text di dalam card ikut hitam */
+.recipe-card h4 {
+    color: #111;
+    font-weight: 600;
+}
+
+.recipe-card .recipe-meta span {
+    color: #666;
+}
+
+/* Hover tetap elegan */
+.recipe-card:hover h4 {
+    color: #EF7722; /* opsional, biar ada efek */
+}
+.recipe-detail {
+    max-width: 860px;
+    margin: 40px auto;
+    padding: 0 24px;
+    font-family: Inter, sans-serif;
+}
+
+.recipe-cover {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.recipe-title {
+    margin: 24px 0 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #EF7722;
+}
+
+.recipe-info {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.info-card {
+    flex: 1;
+    background: #FFF3E9;
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+}
+
+.info-card span {
+    font-size: 20px;
+}
+
+.info-card p {
+    margin: 6px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.info-card strong {
+    font-size: 14px;
+    color: #111;
+}
+
+.recipe-section {
+    margin-bottom: 32px;
+}
+
+.recipe-section h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.recipe-section ul,
+.recipe-section ol {
+    padding-left: 20px;
+}
+
+.recipe-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #333;
+}
+
 /* =========================
    CTA
 ========================= */
@@ -349,4 +438,198 @@ body {
     font-size: 12px;
     color: #ef7722;
     text-align: center;
+}
+
+/* =========================
+   CARI RESEP (CONTENT ONLY)
+========================= */
+
+:root {
+    --orange: #EF7722;
+    --text-dark: #222;
+    --text-gray: #777;
+    --border: #eee;
+    --radius: 14px;
+}
+
+/* ===== PAGE WRAPPER ===== */
+.page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 64px;
+}
+
+/* ===== SEARCH ===== */
+.search-section {
+    margin-bottom: 56px;
+}
+
+.search-input {
+    width: 100%;
+    height: 52px;
+    padding: 0 20px 0 48px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%23999' stroke-width='2'%3E%3Ccircle cx='8' cy='8' r='7'/%3E%3Cline x1='13' y1='13' x2='17' y2='17'/%3E%3C/svg%3E") no-repeat 18px center;
+}
+
+/* ===== SECTION ===== */
+.section {
+    margin-bottom: 64px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.section-title span {
+    color: var(--orange);
+}
+
+.section-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--orange);
+    text-decoration: none;
+}
+
+/* ===== GRID ===== */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+/* ===== CARD ===== */
+.recipe-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    transition: .25s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,.06);
+}
+
+.recipe-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+.recipe-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--text-gray);
+}
+/* =========================
+   DAFTAR RESEP
+========================= */
+
+.recipe-list {
+    padding-top: 24px;
+    padding-bottom: 80px;
+}
+
+/* ================= RESEP POPULER PAGE ================= */
+
+.popular-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 64px 64px 96px;
+}
+
+.popular-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.popular-header span {
+    color: #EF7722;
+}
+
+/* GRID */
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+/* CARD */
+.popular-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    text-decoration: none;
+    border: 1px solid #f1f1f1;
+    transition: all 0.25s ease;
+}
+
+.popular-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.popular-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+/* TITLE */
+.popular-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #EF7722;
+    margin-bottom: 12px;
+}
+
+/* META */
+.popular-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-page {
+        padding: 40px 24px;
+    }
 }

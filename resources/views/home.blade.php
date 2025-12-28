@@ -13,77 +13,65 @@
                     Cookora membantu kamu menciptakan, mengatur, dan menjalankan ide–ide terbaikmu dengan cara yang lebih
                     mudah dan menyenangkan.
                 </p>
-                <a href="#" class="btn-primary">Jelajahi Resep</a>
+                <a href="{{ route('recipes.search') }}" class="btn-primary">
+                    Jelajahi Resep
+                </a>
+
             </div>
 
-<div class="hero-image">
-    <img 
-        src="{{ asset('images/chef-illustration.png') }}" 
-        alt="Ilustrasi Memasak Cookora"
-        class="hero-illustration"
-    >
-</div>
+            <div class="hero-image">
+                <img src="{{ asset('images/chef-illustration.png') }}" alt="Ilustrasi Memasak Cookora"
+                    class="hero-illustration">
+            </div>
 
 
         </div>
     </section>
 
-{{-- ================= WHY ================= --}}
-<section class="why">
-    <h2>Kenapa <span>Cookora</span>?</h2>
+    {{-- ================= WHY ================= --}}
+    <section class="why">
+        <h2>Kenapa <span>Cookora</span>?</h2>
 
-    <div class="why-grid">
-        <div class="why-card">
-            <div class="why-icon-wrap">
-                <img 
-                    src="{{ asset('images/resep-dapur.png') }}"
-                    alt="Resep Terpilih"
-                    class="why-icon"
-                >
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon-wrap">
+                    <img src="{{ asset('images/resep-dapur.png') }}" alt="Resep Terpilih" class="why-icon">
+                </div>
+
+                <h3>Resep Terpilih Dari Dapur Kami</h3>
+                <p>
+                    Semua hidangan di Cookora disusun langsung oleh tim kami.
+                    Kualitas rasa, langkah yang mudah diikuti, dan bahan yang
+                    mudah ditemukan.
+                </p>
             </div>
 
-            <h3>Resep Terpilih Dari Dapur Kami</h3>
-            <p>
-                Semua hidangan di Cookora disusun langsung oleh tim kami.
-                Kualitas rasa, langkah yang mudah diikuti, dan bahan yang
-                mudah ditemukan.
-            </p>
-        </div>
+            <div class="why-card">
+                <div class="why-icon-wrap">
+                    <img src="{{ asset('images/langkah-jelas.png') }}" alt="Langkah Jelas" class="why-icon">
+                </div>
 
-        <div class="why-card">
-            <div class="why-icon-wrap">
-                <img 
-                    src="{{ asset('images/langkah-jelas.png') }}"
-                    alt="Langkah Jelas"
-                    class="why-icon"
-                >
+                <h3>Langkah Jelas & Anti Gagal</h3>
+                <p>
+                    Instruksi ditulis rapi dan ringkas.
+                    Cocok untuk pemula, praktis untuk yang sudah jago.
+                </p>
             </div>
 
-            <h3>Langkah Jelas & Anti Gagal</h3>
-            <p>
-                Instruksi ditulis rapi dan ringkas.
-                Cocok untuk pemula, praktis untuk yang sudah jago.
-            </p>
-        </div>
+            <div class="why-card">
+                <div class="why-icon-wrap">
+                    <img src="{{ asset('images/hemat-waktu.png') }}" alt="Hemat Waktu" class="why-icon">
+                </div>
 
-        <div class="why-card">
-            <div class="why-icon-wrap">
-                <img 
-                    src="{{ asset('images/hemat-waktu.png') }}"
-                    alt="Hemat Waktu"
-                    class="why-icon"
-                >
+                <h3>Hemat Waktu</h3>
+                <p>
+                    Tidak ada fitur rumit, tidak ada upload user, tidak ada kebisingan.
+                    Hanya resep yang kamu butuhkan, langsung terlihat,
+                    langsung dipraktikkan.
+                </p>
             </div>
-
-            <h3>Hemat Waktu</h3>
-            <p>
-                Tidak ada fitur rumit, tidak ada upload user, tidak ada kebisingan.
-                Hanya resep yang kamu butuhkan, langsung terlihat,
-                langsung dipraktikkan.
-            </p>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -96,62 +84,57 @@
         @php
             $featuredRecipes = [
                 [
-                    'title' => 'Ayam Panggang Madu',
-                    'time' => '45 Menit',
-                    'serve' => '3 Orang',
-                    'img' =>     'https://images.unsplash.com/photo-1555939594-58d7cb561ad1',
-                ],
-                [
-                    'title' => 'Pasta Creamy Jamur',
-                    'time' => '30 Menit',
-                    'serve' => '2 Orang',
-                    'img' => 'https://images.unsplash.com/photo-1625943555419-56a2cb596640',
-                ],
-                [
-                    'title' => 'Salmon Saus Lemon',
-                    'time' => '25 Menit',
-                    'serve' => '2 Orang',
-                    'img' => 'https://images.unsplash.com/photo-1603133872878-684f208fb84b',
-                ],
-                [
-                    'title' => 'Rice Bowl Teriyaki',
-                    'time' => '20 Menit',
-                    'serve' => '1 Orang',
-                    'img' =>     'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe',
-                ],
-                [
-                    'title' => 'Sup Sayur Sehat',
-                    'time' => '35 Menit',
+                    'title' => 'Ayam Rica Rica',
+                    'slug'  => 'ayam-rica-rica',
+                    'time'  => '45 Menit',
                     'serve' => '4 Orang',
-                    'img' => 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9',
+                    'img'   => 'https://assets.unileversolutions.com/recipes-v3/125515-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)',
                 ],
                 [
-                    'title' => 'Pancake Madu',
-                    'time' => '15 Menit',
-                    'serve' => '2 Orang',
-                    'img' => 'https://images.unsplash.com/photo-1606787366850-de6330128bfc',
+                    'title' => 'Opor Ayam',
+                    'slug'  => 'opor-ayam',
+                    'time'  => '60 Menit',
+                    'serve' => '4 Orang',
+                    'img'   => 'https://assets.unileversolutions.com/recipes-v3/230519-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)',
                 ],
                 [
-                    'title' => 'Nasi Goreng Spesial',
-                    'time' => '20 Menit',
+                    'title' => 'Tumis Kangkung',
+                    'slug'  => 'tumis-kangkung',
+                    'time'  => '15 Menit',
                     'serve' => '2 Orang',
-                    'img' =>    'https://images.unsplash.com/photo-1490645935967-10de6ba17061', 
+                    'img'   => 'https://assets.unileversolutions.com/recipes-v3/230520-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)',
                 ],
                 [
-                    'title' => 'Chicken Steak',
-                    'time' => '40 Menit',
-                    'serve' => '2 Orang',
-                    'img' => 'https://images.unsplash.com/photo-1603133872878-684f208fb84b',
+                    'title' => 'Nasi Kebuli',
+                    'slug'  => 'nasi-kebuli',
+                    'time'  => '90 Menit',
+                    'serve' => '5 Orang',
+                    'img'   => 'https://assets.unileversolutions.com/recipes-v3/230922-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)',
+                ],
+                [
+                    'title' => 'Soto Ayam',
+                    'slug'  => 'soto-ayam',
+                    'time'  => '60 Menit',
+                    'serve' => '4 Orang',
+                    'img'   => 'https://assets.unileversolutions.com/recipes-v3/125763-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)',
+                ],
+                [
+                    'title' => 'Sayur Lodeh',
+                    'slug'  => 'sayur-lodeh',
+                    'time'  => '40 Menit',
+                    'serve' => '4 Orang',
+                    'img'   => 'https://assets.unileversolutions.com/recipes-v3/230915-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)',
                 ],
             ];
         @endphp
 
         @foreach ($featuredRecipes as $recipe)
-            <div class="recipe-card">
-                <img 
-                    src="{{ $recipe['img'] }}" 
-                    alt="{{ $recipe['title'] }}" 
+            <a href="{{ route('recipes.show', $recipe['slug']) }}" class="recipe-card">
+                <img
+                    src="{{ $recipe['img'] }}"
+                    alt="{{ $recipe['title'] }}"
                     class="recipe-img"
+                    loading="lazy"
                 >
 
                 <h4>{{ $recipe['title'] }}</h4>
@@ -160,47 +143,74 @@
                     <span>⏱ {{ $recipe['time'] }}</span>
                     <span>👥 {{ $recipe['serve'] }}</span>
                 </div>
-            </div>
+            </a>
         @endforeach
     </div>
 </section>
+
 
 
     {{-- ================= CTA ================= --}}
     <section class="cta">
         <h2>Masak Apa Hari Ini?</h2>
         <p>Biarkan Cookora membantumu menemukan inspirasi.</p>
-        <a href="#" class="btn-primary">Jelajahi Resep</a>
+        <a href="{{ route('recipes.search') }}" class="btn-primary">
+            Jelajahi Resep
+        </a>
+
     </section>
 
-    {{-- ================= RESEP LAINNYA ================= --}}
-    <section class="more">
-        <div class="more-header">
-            <h2>Resep <span>Lainnya</span></h2>
-            <a href="#" class="more-link">Lihat Resep</a>
-        </div>
+{{-- ================= RESEP LAINNYA ================= --}}
+<section class="more">
+    <div class="more-header">
+        <h2>Resep <span>Lainnya</span></h2>
+    </div>
 
-        <div class="recipe-grid">
-            @php
-                $moreRecipes = [
-                    'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe',
-                    'https://images.unsplash.com/photo-1608755728474-2c4d8e43b5b6',
-                    'https://images.unsplash.com/photo-1555939594-58d7cb561ad1',
-                ];
-            @endphp
+    <div class="recipe-grid">
+        @php
+            $moreRecipes = [
+                [
+                    'title' => 'Sup Krim Ayam Istimewa',
+                    'slug'  => 'sup-krim-ayam-istimewa',
+                    'time'  => '30 Menit',
+                    'serve' => '3 Orang',
+                    'img'   => 'https://assets.unileversolutions.com/recipes-v3/125690-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)',
+                ],
+                [
+                    'title' => 'Tumis Tahu Hijau',
+                    'slug'  => 'tumis-tahu-hijau',
+                    'time'  => '20 Menit',
+                    'serve' => '2 Orang',
+                    'img'   => 'https://assets.unileversolutions.com/recipes-v3/125720-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)',
+                ],
+                [
+                    'title' => 'Cumi Krispi Cocol Madu',
+                    'slug'  => 'cumi-krispi-cocol-madu',
+                    'time'  => '25 Menit',
+                    'serve' => '3 Orang',
+                    'img'   => 'https://assets.unileversolutions.com/recipes-v3/125699-default.jpg',
+                ],
+            ];
+        @endphp
 
-            @foreach ($moreRecipes as $img)
-                <div class="recipe-card">
-                    <img src="{{ $img }}" alt="Resep Lainnya" class="recipe-img">
+        @foreach ($moreRecipes as $recipe)
+            <a href="{{ route('recipes.show', $recipe['slug']) }}" class="recipe-card">
+                <img
+                    src="{{ $recipe['img'] }}"
+                    alt="{{ $recipe['title'] }}"
+                    class="recipe-img"
+                    loading="lazy"
+                >
 
-                    <h4>Nama Resep</h4>
+                <h4>{{ $recipe['title'] }}</h4>
 
-                    <div class="recipe-meta">
-                        <span>⏱ 25 Menit</span>
-                        <span>👥 3 Orang</span>
-                    </div>
+                <div class="recipe-meta">
+                    <span>⏱ {{ $recipe['time'] }}</span>
+                    <span>👥 {{ $recipe['serve'] }}</span>
                 </div>
-            @endforeach
-        </div>
-    </section>
+            </a>
+        @endforeach
+    </div>
+</section>
+
 @endsection

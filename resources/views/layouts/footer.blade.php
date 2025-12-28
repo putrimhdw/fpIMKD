@@ -13,9 +13,10 @@
 
         {{-- NAVIGATION --}}
         <div class="footer-nav">
-            <a href="#">Beranda</a>
-            <a href="#">Cari Resep</a>
-            <a href="#">Daftar Resep</a>
+            <a href="{{ route('home') }}">Beranda</a>
+            <a href="{{ route('recipes.search') }}">Cari Resep</a>
+            <a href="{{ route('recipes.index') }}">Daftar Resep</a>
+
         </div>
 
         {{-- DIVIDER --}}
